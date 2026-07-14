@@ -1,4 +1,4 @@
-// Typing Animation
+// Typing Animation 
 
 const texts = [
     "Frontend Developer",
