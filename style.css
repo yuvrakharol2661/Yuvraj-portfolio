@@ -461,7 +461,7 @@ button{
 
 .menu{
     display:none;
-    font-size:32px;
+    font-size:30px;
     color:#38bdf8;
     cursor:pointer;
 }
@@ -595,4 +595,137 @@ button{
 
 .resume-nav:hover{
     background: #0097a7;
+}
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+
+        padding:15px 20px;
+        height:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+
+    }
+
+    .logo{
+
+        font-size:28px;
+
+    }
+
+    .menu{
+
+        display:block;
+
+    }
+
+    .navbar ul{
+
+        display:none !important;
+
+        width:100%;
+
+        flex-direction:column;
+
+        margin-top:20px;
+
+        gap:15px;
+
+    }
+
+    .navbar ul.active{
+
+        display:flex !important;
+
+    }
+
+    .navbar ul li{
+
+        width:100%;
+
+    }
+
+    .navbar ul li a{
+
+        width:100%;
+
+        display:block;
+
+        text-align:center;
+
+        padding:14px;
+
+    }
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:140px 20px 60px;
+
+        gap:30px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-image{
+
+        width:250px;
+        height:250px;
+
+    }
+
+    .page{
+
+        padding:130px 20px 50px;
+
+    }
+
+    .cert-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ================= DESKTOP ================= */
+
+@media screen and (min-width:769px){
+
+    .menu{
+
+        display:none;
+
+    }
+
+    .navbar ul{
+
+        display:flex !important;
+
+    }
+
 }
