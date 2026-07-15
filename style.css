@@ -729,3 +729,22 @@ button{
     }
 
 }
+
+/* ===== FINAL RESPONSIVE OVERRIDE ===== */
+.menu{display:none;}
+@media (max-width:768px){
+.menu{display:block !important;font-size:32px;color:#38bdf8;cursor:pointer;}
+.navbar{padding:15px 20px !important;height:auto !important;flex-wrap:wrap;}
+.navbar ul{display:none !important;flex-direction:column !important;width:100%;margin-top:15px;}
+.navbar ul.active{display:flex !important;}
+.navbar ul li{width:100%;}
+.navbar ul li a{display:block;width:100%;text-align:center;}
+.hero{flex-direction:column-reverse !important;padding:140px 20px 50px !important;gap:30px;text-align:center;}
+.hero-image{width:240px !important;height:240px !important;}
+.hero-content h1{font-size:2.4rem;}
+.hero-content h2{font-size:1.5rem;}
+}
+@media (min-width:769px){
+.menu{display:none !important;}
+.navbar ul{display:flex !important;}
+}
