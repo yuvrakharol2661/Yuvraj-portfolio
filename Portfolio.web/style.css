@@ -459,22 +459,20 @@ button{
 
 }
 
-
-
-/* ================= MOBILE ================= */
-
-
-
 .menu{
     display:none;
-    font-size:32px;
-    color:white;
+    font-size:30px;
+    color:#38bdf8;
     cursor:pointer;
 }
 
+/* MOBILE */
 
+@media only screen and (max-width:768px){
 
-@media (max-width:768px){
+    .menu{
+        display:block;
+    }
 
     .navbar{
         padding:15px 20px;
@@ -482,18 +480,10 @@ button{
         flex-wrap:wrap;
     }
 
-    .navbar h2{
-        font-size:28px;
-    }
-
-    .menu{
-        display:block;
-    }
-
     .navbar ul{
         display:none;
-        width:100%;
         flex-direction:column;
+        width:100%;
         margin-top:20px;
         gap:15px;
     }
@@ -508,36 +498,19 @@ button{
 
     .navbar ul li a{
         display:block;
-        text-align:center;
         width:100%;
+        text-align:center;
     }
 
     .hero{
         flex-direction:column-reverse;
+        padding:140px 20px 40px;
         text-align:center;
-        padding:150px 20px 50px;
-        gap:30px;
     }
 
     .hero-image{
-        width:260px;
-        height:260px;
-    }
-
-    .hero-content h1{
-        font-size:2.4rem;
-    }
-
-    .hero-content h2{
-        font-size:1.5rem;
-    }
-
-    .page{
-        padding:140px 20px 50px;
-    }
-
-    .cert-grid{
-        grid-template-columns:1fr;
+        width:250px;
+        height:250px;
     }
 
 }
@@ -622,4 +595,137 @@ button{
 
 .resume-nav:hover{
     background: #0097a7;
+}
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width:768px){
+
+    .navbar{
+
+        padding:15px 20px;
+        height:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+
+    }
+
+    .logo{
+
+        font-size:28px;
+
+    }
+
+    .menu{
+
+        display:block;
+
+    }
+
+    .navbar ul{
+
+        display:none !important;
+
+        width:100%;
+
+        flex-direction:column;
+
+        margin-top:20px;
+
+        gap:15px;
+
+    }
+
+    .navbar ul.active{
+
+        display:flex !important;
+
+    }
+
+    .navbar ul li{
+
+        width:100%;
+
+    }
+
+    .navbar ul li a{
+
+        width:100%;
+
+        display:block;
+
+        text-align:center;
+
+        padding:14px;
+
+    }
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:140px 20px 60px;
+
+        gap:30px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.5rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size:1.5rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .hero-image{
+
+        width:250px;
+        height:250px;
+
+    }
+
+    .page{
+
+        padding:130px 20px 50px;
+
+    }
+
+    .cert-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ================= DESKTOP ================= */
+
+@media screen and (min-width:769px){
+
+    .menu{
+
+        display:none;
+
+    }
+
+    .navbar ul{
+
+        display:flex !important;
+
+    }
+
 }
