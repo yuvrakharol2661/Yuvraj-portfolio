@@ -1,4 +1,4 @@
-// Typing Animation
+// Typing Animation 
 
 const texts = [
     "Frontend Developer",
@@ -140,4 +140,7 @@ alert("Message Failed ❌");
 });
 
 
+}
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
 }
