@@ -459,31 +459,26 @@ button{
 
 }
 
-
-
-/* ================= MOBILE ================= */
-
-
+/* ================= MOBILE NAVBAR ================= */
 
 .menu{
     display:none;
     font-size:32px;
-    color:white;
+    color:#38bdf8;
     cursor:pointer;
 }
 
+/* Mobile */
 
-
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
     .navbar{
         padding:15px 20px;
         height:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
         flex-wrap:wrap;
-    }
-
-    .navbar h2{
-        font-size:28px;
     }
 
     .menu{
@@ -493,9 +488,9 @@ button{
     .navbar ul{
         display:none;
         width:100%;
-        flex-direction:column;
         margin-top:20px;
-        gap:15px;
+        flex-direction:column;
+        gap:12px;
     }
 
     .navbar ul.active{
@@ -508,20 +503,21 @@ button{
 
     .navbar ul li a{
         display:block;
-        text-align:center;
         width:100%;
+        text-align:center;
+        padding:12px;
     }
 
     .hero{
         flex-direction:column-reverse;
         text-align:center;
-        padding:150px 20px 50px;
+        padding:140px 20px 50px;
         gap:30px;
     }
 
     .hero-image{
-        width:260px;
-        height:260px;
+        width:250px;
+        height:250px;
     }
 
     .hero-content h1{
@@ -529,7 +525,11 @@ button{
     }
 
     .hero-content h2{
-        font-size:1.5rem;
+        font-size:1.6rem;
+    }
+
+    .hero-content p{
+        font-size:16px;
     }
 
     .page{
@@ -538,6 +538,21 @@ button{
 
     .cert-grid{
         grid-template-columns:1fr;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width:769px){
+
+    .menu{
+        display:none;
+    }
+
+    .navbar ul{
+        display:flex !important;
+        flex-direction:row;
     }
 
 }
