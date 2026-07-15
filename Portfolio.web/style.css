@@ -464,56 +464,83 @@ button{
 /* ================= MOBILE ================= */
 
 
+
 .menu{
-
     display:none;
-
-    font-size:25px;
-
+    font-size:32px;
+    color:white;
     cursor:pointer;
-
 }
 
 
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-
-    .hero{
-
-        flex-direction:column-reverse;
-
-        text-align:center;
-
-        gap:30px;
-
+    .navbar{
+        padding:15px 20px;
+        height:auto;
+        flex-wrap:wrap;
     }
 
-
-    .hero-content h1{
-
-        font-size:3rem;
-
+    .navbar h2{
+        font-size:28px;
     }
-
-
-    .hero-image{
-
-        width:280px;
-
-        height:280px;
-
-    }
-    
 
     .menu{
-
         display:block;
+    }
 
+    .navbar ul{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        margin-top:20px;
+        gap:15px;
+    }
+
+    .navbar ul.active{
+        display:flex;
+    }
+
+    .navbar ul li{
+        width:100%;
+    }
+
+    .navbar ul li a{
+        display:block;
+        text-align:center;
+        width:100%;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:150px 20px 50px;
+        gap:30px;
+    }
+
+    .hero-image{
+        width:260px;
+        height:260px;
+    }
+
+    .hero-content h1{
+        font-size:2.4rem;
+    }
+
+    .hero-content h2{
+        font-size:1.5rem;
+    }
+
+    .page{
+        padding:140px 20px 50px;
+    }
+
+    .cert-grid{
+        grid-template-columns:1fr;
     }
 
 }
-
 /* ===== CERTIFICATE IMAGE FIX ===== */
 
 .cert-grid{
