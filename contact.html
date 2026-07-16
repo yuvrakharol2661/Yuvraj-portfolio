@@ -1,128 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>Contact</title>
-<link rel="icon" type="image/png" href="logo.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Yuvraj Kharol</title>
+
+<link rel="icon" href="logo.png">
 <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
-
 <body>
 
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
-    <h2>Yuvraj.</h2>
+<div class="logo">
+<h2>Yuvraj<span>.</span></h2>
+</div>
 
-    <div class="menu" onclick="toggleMenu()">
-        ☰
-    </div>
+<div class="menu" id="menuBtn">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-     <ul id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="Yuvraj_Resume.pdf" class="resume-nav" target="_blank">Resume</a></li>
-    </ul>
+<ul id="navLinks">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="certifications.html">Certificates</a></li>
+
+<li><a href="contact.html" class="active">Contact</a></li>
+
+<li>
+<a href="Yuvraj_Resume.pdf"
+target="_blank"
+class="resume-btn">
+Resume
+</a>
+</li>
+
+</ul>
 
 </nav>
 
-<section class="page">
+<!-- ================= CONTACT ================= -->
 
+<section class="page">
 
 <h1>Contact Me</h1>
 
+<div class="contact-container">
+
+<div class="contact-info">
+
+<h2>Let's Connect 👋</h2>
+
+<p>
+
+I'm always open to internships,
+freelance work and collaboration.
+
+Feel free to contact me anytime.
+
+</p>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>
+yuvrajkharol19@gmail.com
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<span>
++91 6375382661
+</span>
+
+</div>
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>
+Bhilwara, Rajasthan
+</span>
+
+</div>
+
+<div class="social-links">
+
+<a href="https://github.com/yuvrakharol2661/Yuvraj-portfolio.git" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/yuvraj2661?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:yuvrajkharol19@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+<a href="https://www.instagram.com/itx_yuvraj_2661?igsh=MWVuOXg1aXdmbWp3aA==" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="contact-form">
 
 <form id="contact-form">
 
-<input 
+<input
 type="text"
 name="name"
-placeholder="Name"
+placeholder="Your Name"
 required>
-
 
 <input
 type="email"
 name="email"
-placeholder="Email"
+placeholder="Your Email"
 required>
-
 
 <textarea
 name="message"
-placeholder="Message"
+placeholder="Write your message..."
 required>
 </textarea>
 
-
 <button type="submit">
+
 Send Message
+
 </button>
 
 </form>
 
+</div>
+
+</div>
+
 </section>
 
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Yuvraj Kharol
+
+<br>
+
+Designed & Developed by Yuvraj Kharol ❤️
+
+</p>
+
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js">
 
-emailjs.init({
-    publicKey: "zHvI62Fhz8VFDt1Jy"
-});
-
-
-document
-.getElementById("contact-form")
-.addEventListener("submit", function(e){
-
-e.preventDefault();
-
-
-emailjs.sendForm(
-
-"service_46dptr8",
-
-"template_dv7x87i",
-
-this
-
-)
-
-.then(function(response){
-
-console.log("SUCCESS", response);
-
-alert("Message Sent Successfully ✅");
-
-
-document
-.getElementById("contact-form")
-.reset();
-
-
-}, function(error){
-
-
-console.log("FAILED", error);
-
-
-alert("Message Failed ❌ Check Console");
-
-
-});
-
-
-});
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
-
 </html>
