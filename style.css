@@ -376,3 +376,27 @@ button{
         display:flex;
     }
 }
+.menu{
+    display:none;
+    font-size:32px;
+    color:#38bdf8;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .menu{
+        display:block;
+    }
+
+    .navbar ul{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:15px;
+    }
+
+    .navbar ul.active{
+        display:flex;
+    }
+}

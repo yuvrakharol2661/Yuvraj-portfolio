@@ -140,19 +140,6 @@ alert("Message Failed ❌");
 });
 
 
-}const menu = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-if(menu){
-
-    menu.addEventListener("click",()=>{
-
-        navLinks.classList.toggle("active");
-
-        menu.innerHTML = navLinks.classList.contains("active")
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-
-    });
-
+}function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
 }
