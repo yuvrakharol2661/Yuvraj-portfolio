@@ -1,50 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Home</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="logo.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yuvraj Kharol | Portfolio</title>
+
+    <meta name="description"
+        content="Portfolio of Yuvraj Kharol | Frontend Developer | BCA Student | Data Analyst Aspirant">
+
+    <link rel="icon" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 <body>
+
+<!-- ================= NAVBAR ================= -->
+
 <nav class="navbar">
 
-    <h2>Yuvraj.</h2>
+<div class="logo">
+<h2>Yuvraj<span>.</span></h2>
+</div>
 
-    <div class="menu" onclick="toggleMenu()">
-        ☰
-    </div>
+<div class="menu" id="menuBtn">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-    <ul id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="resume.pdf" class="resume-nav" target="_blank">Resume</a></li>
-    </ul>
+<ul id="navLinks">
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="Projects.html">Projects</a></li>
+
+<li><a href="certifications.html">Certificates</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="Yuvraj_Resume.pdf"
+target="_blank"
+class="resume-btn">
+Resume
+</a>
+</li>
+
+</ul>
 
 </nav>
+
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
-    <div class="hero-content">
-        <h1>Yuvraj Kharol</h1>
-        <h2 id="typing"></h2>
-        <p>Frontend Developer & BCA Student</p>
+<div class="hero-content">
 
-        <a href="about.html" class="btn">
-            Know More
-        </a>
-    </div>
+<p class="hello">
+Hello 👋 I'm
+</p>
 
-   <div class="hero-image">
-    <img src="profile.png" alt="Yuvraj Kharol">
+<h1>
+
+Yuvraj Kharol
+
+</h1>
+
+<h2 id="typing"></h2>
+
+<p class="hero-text">
+
+Passionate Frontend Developer, BCA Student and aspiring
+Data Analyst.
+
+I enjoy creating beautiful, responsive websites and
+building real-world projects while continuously learning
+modern technologies.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="Yuvraj_Resume.pdf"
+target="_blank"
+class="btn">
+
+Download Resume
+
+</a>
+
+<a href="contact.html"
+class="btn btn-outline">
+
+Contact Me
+
+</a>
+
+</div>
+
+<div class="social-links">
+
+<a href="https://github.com/yuvrakharol2661/Yuvraj-portfolio.git" target="_blank">
+    <i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/yuvraj-kharol-2661" target="_blank">
+    <i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:yuvrakharol2661@gmail.com">
+    <i class="fas fa-envelope"></i>
+</a>
+
+<a href="https://www.instagram.com/yuvraj_kharol_2661" target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img
+src="profile.png"
+alt="Yuvraj Kharol">
+
 </div>
 
 </section>
 
 <script src="script.js"></script>
+<script>
     
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 </body>
+
 </html>

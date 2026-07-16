@@ -1,145 +1,284 @@
-// Typing Animation 
+/* ==========================
+      TYPING ANIMATION
+========================== */
 
-const texts = [
+const words = [
     "Frontend Developer",
     "Web Developer",
     "BCA Student",
-    "Data Analytics learner",
+    "Data Analyst Aspirant"
 ];
 
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-(function type(){
+const typing = document.getElementById("typing");
 
-    if(document.getElementById("typing")){
+function typeEffect(){
 
-        if(count === texts.length){
-            count = 0;
-        }
+    if(!typing) return;
 
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
+    let currentWord = words[wordIndex];
 
-        document.getElementById("typing").textContent = letter;
+    if(isDeleting){
 
-        if(letter.length === currentText.length){
-            count++;
-            index = 0;
-            setTimeout(type,1500);
-        }else{
-            setTimeout(type,100);
-        }
+        typing.textContent =
+        currentWord.substring(0,charIndex--);
+
+    }else{
+
+        typing.textContent =
+        currentWord.substring(0,charIndex++);
+
     }
 
-})();
+    let speed = isDeleting ? 60 : 120;
 
+    if(!isDeleting && charIndex === currentWord.length+1){
 
-// Theme Toggle
+        isDeleting = true;
 
-const themeBtn = document.getElementById("themeBtn");
+        speed = 1500;
 
-if(themeBtn){
+    }
 
-    themeBtn.addEventListener("click",()=>{
+    if(isDeleting && charIndex === 0){
 
-        document.body.classList.toggle("light");
+        isDeleting = false;
 
-        localStorage.setItem(
-            "theme",
-            document.body.classList.contains("light")
-            ? "light"
-            : "dark"
-        );
+        wordIndex++;
 
-    });
+        if(wordIndex === words.length){
+
+            wordIndex = 0;
+
+        }
+
+    }
+
+    setTimeout(typeEffect,speed);
 
 }
 
-// Load Saved Theme
-
-if(localStorage.getItem("theme")==="light"){
-    document.body.classList.add("light");
-}
+typeEffect();
 
 
-// Mobile Menu
 
-const menuBtn = document.querySelector(".menu");
-const navMenu = document.querySelector(".navbar ul");
+/* ==========================
+      MOBILE MENU
+========================== */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
 if(menuBtn){
 
-    menuBtn.addEventListener("click",()=>{
+menuBtn.addEventListener("click",()=>{
 
-        navMenu.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
-    });
+    if(menuBtn.innerHTML.includes("bars")){
+
+        menuBtn.innerHTML =
+        '<i class="fa-solid fa-xmark"></i>';
+
+    }
+
+    else{
+
+        menuBtn.innerHTML =
+        '<i class="fa-solid fa-bars"></i>';
+
+    }
+
+});
 
 }
 
 
-// EmailJS Contact Form
+
+/* ==========================
+ CLOSE MENU AFTER CLICK
+========================== */
+
+document
+.querySelectorAll("#navLinks a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+    navLinks.classList.remove("active");
+
+    if(menuBtn){
+
+    menuBtn.innerHTML =
+    '<i class="fa-solid fa-bars"></i>';
+
+    }
+
+});
+
+});
 
 
-const contactForm = document.getElementById("contact-form");
+
+/* ==========================
+ ACTIVE NAVBAR
+========================== */
+
+const currentPage =
+window.location.pathname.split("/").pop();
+
+document
+.querySelectorAll(".navbar a")
+.forEach(link=>{
+
+const file =
+link.getAttribute("href");
+
+if(file===currentPage){
+
+link.classList.add("active");
+
+}
+
+});
 
 
-if(contactForm){
 
+/* ==========================
+ STICKY NAVBAR
+========================== */
+
+window.addEventListener("scroll",()=>{
+
+const navbar =
+document.querySelector(".navbar");
+
+if(window.scrollY>50){
+
+navbar.style.background =
+"rgba(15,23,42,.95)";
+
+}
+
+else{
+
+navbar.style.background =
+"rgba(15,23,42,.80)";
+
+}
+
+});
+
+
+
+/* ==========================
+ SCROLL TO TOP
+========================== */
+
+const topBtn =
+document.createElement("button");
+
+topBtn.innerHTML =
+'<i class="fa-solid fa-arrow-up"></i>';
+
+topBtn.id="topBtn";
+
+document.body.appendChild(topBtn);
+
+topBtn.style.cssText=`
+
+position:fixed;
+bottom:30px;
+right:30px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#38bdf8;
+color:#0f172a;
+font-size:20px;
+cursor:pointer;
+display:none;
+z-index:9999;
+
+`;
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>250){
+
+topBtn.style.display="block";
+
+}
+
+else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+
+
+/* ==========================
+ EMAIL JS
+========================== */
+
+const form =
+document.getElementById("contact-form");
+
+if(form){
 
 emailjs.init({
 
-    publicKey:"zHvI62Fhz8VFDt1Jy"
+publicKey:"zHvI62Fhz8VFDt1Jy"
 
 });
 
-
-
-contactForm.addEventListener("submit", function(e){
-
+form.addEventListener("submit",function(e){
 
 e.preventDefault();
 
-
-
 emailjs.sendForm(
 
-    "service_46dptr8",
+"service_46dptr8",
 
-    "template_dv7x87i",
+"template_dv7x87i",
 
-    this
+this
 
 )
 
-
-.then(function(){
-
+.then(()=>{
 
 alert("Message Sent Successfully ✅");
 
+form.reset();
 
-contactForm.reset();
+})
 
-
-}, function(error){
-
-
-console.log(error);
-
+.catch(()=>{
 
 alert("Message Failed ❌");
 
+});
 
 });
 
-
-});
-
-
-}function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
 }

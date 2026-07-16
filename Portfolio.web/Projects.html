@@ -1,96 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Projects | Yuvraj Kharol</title>
+
+<link rel="icon" href="logo.png">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="logo.png">
-</head>
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
-    <h2>Yuvraj.</h2>
+<div class="logo">
+<h2>Yuvraj<span>.</span></h2>
+</div>
 
-    <div class="menu" onclick="toggleMenu()">
-        ☰
-    </div>
+<div class="menu" id="menuBtn">
+<i class="fa-solid fa-bars"></i>
+</div>
 
-    <ul id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="contact.html">Contact</a></li>
+<ul id="navLinks">
 
-        <li>
-            <a href="Yuvraj_Resume.pdf" download class="resume-nav">
-                Resume
-            </a>
-        </li>
-    </ul>
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html" class="active">Projects</a></li>
+
+<li><a href="certifications.html">Certificates</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="Yuvraj_Resume.pdf"
+target="_blank"
+class="resume-btn">
+Resume
+</a>
+</li>
+
+</ul>
 
 </nav>
 
-<section class="page">
+<!-- ================= PROJECTS ================= -->
 
+<section class="page">
 
 <h1>My Projects</h1>
 
-
 <div class="cert-grid">
 
+<!-- Portfolio -->
 
 <div class="card">
+
+<img src="project1.png" alt="Portfolio">
 
 <h2>Portfolio Website</h2>
 
-
-
-<img src="../project1.png" alt="Portfolio Website">
-
 <p>
-A personal portfolio website created to showcase my profile,
-skills, certifications and projects.
+
+Responsive portfolio developed using
+HTML, CSS and JavaScript.
+
+Features include responsive layout,
+typing animation, hamburger menu,
+certificate gallery and contact form.
+
 </p>
+
+<p><strong>Tech Stack:</strong><br>
+HTML • CSS • JavaScript
+</p>
+
+<div class="hero-buttons">
+
+<a href="https://yuvraj-portfolio-rho.vercel.app/"
+class="btn">
+Live Demo
+</a>
+
+<a href="https://github.com/yuvrakharol2661/Yuvraj-portfolio.git"
+class="btn btn-outline">
+GitHub
+</a>
+
 </div>
 
+</div>
+
+<!-- AI Assistant -->
 
 <div class="card">
+
+<img src="project2.png" alt="AI Assistant">
 
 <h2>AI Assistant</h2>
 
-<img src="../project2.png" alt="AI Assistant">
 <p>
-A basic AI Assistant project that can perform simple conversations
-and interact with users.
+
+Simple browser based AI Assistant
+capable of basic conversations,
+voice responses and user interaction.
+
 </p>
+
+<p><strong>Tech Stack:</strong><br>
+
+HTML • CSS • JavaScript
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#"
+class="btn">
+Live Demo
+</a>
+
+<a href="#"
+class="btn btn-outline">
+GitHub
+</a>
 
 </div>
 
+</div>
+
+<!-- Python Quiz -->
 
 <div class="card">
 
+<img src="project3.png" alt="Python Quiz">
+
 <h2>Python Quiz</h2>
 
-<img src="../project3.png" alt="Python Quiz">
 <p>
-A simple Python-based quiz application to test knowledge on various topics.
+
+A multiple choice quiz application
+developed using Python to improve
+programming practice.
+
 </p>
 
+<p>
+
+<strong>Tech Stack:</strong><br>
+
+Python
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#"
+class="btn">
+View Project
+</a>
+
+<a href="#"
+class="btn btn-outline">
+GitHub
+</a>
+
 </div>
 
-
 </div>
 
+</div>
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Yuvraj Kharol
+
+<br>
+
+Made with ❤️ using HTML, CSS & JavaScript
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 
